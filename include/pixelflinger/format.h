@@ -38,16 +38,32 @@ enum GGLPixelFormat {
     GGL_PIXEL_FORMAT_L_8         =   9,  // 8-bit L (R=G=B = L)
     GGL_PIXEL_FORMAT_LA_88       = 0xA,  // 16-bit LA
     GGL_PIXEL_FORMAT_RGB_332     = 0xB,  // 8-bit RGB (non paletted)
+    
+    /* STE: Added Support of YUV42XMBN, required for Copybit CC acceleration */
+    HAL_PIXEL_FORMAT_YCBCR42XMBN = 0xE,
+    #ifdef STE_hardware
+    HAL_PIXEL_FORMAT_YCbCr_422_P        = 0x12,
+    HAL_PIXEL_FORMAT_YCbCr_420_P        = 0x13,
+    HAL_PIXEL_FORMAT_YCbCr_420_I        = 0x15,
+    HAL_PIXEL_FORMAT_CbYCrY_422_I       = 0x16,	
+    HAL_PIXEL_FORMAT_CbYCrY_420_I       = 0x17,
+    HAL_PIXEL_FORMAT_YCbCr_420_SP_TILED = 0x20,
+    HAL_PIXEL_FORMAT_YCbCr_420_SP       = 0x21,
+    HAL_PIXEL_FORMAT_YCrCb_420_SP_TILED = 0x22,
+    HAL_PIXEL_FORMAT_YCrCb_422_SP       = 0x23,
+    HAL_PIXEL_FORMAT_YCrCb_422_P        = 0x24,
+    HAL_PIXEL_FORMAT_YCrCb_420_P        = 0x25,
+    #endif
 
     // reserved range. don't use.
-    GGL_PIXEL_FORMAT_RESERVED_10 = 0x10,
-    GGL_PIXEL_FORMAT_RESERVED_11 = 0x11,
-    GGL_PIXEL_FORMAT_RESERVED_12 = 0x12,
-    GGL_PIXEL_FORMAT_RESERVED_13 = 0x13,
-    GGL_PIXEL_FORMAT_RESERVED_14 = 0x14,
-    GGL_PIXEL_FORMAT_RESERVED_15 = 0x15,
-    GGL_PIXEL_FORMAT_RESERVED_16 = 0x16,
-    GGL_PIXEL_FORMAT_RESERVED_17 = 0x17,
+    //GGL_PIXEL_FORMAT_RESERVED_10 = 0x10,
+    //GGL_PIXEL_FORMAT_RESERVED_11 = 0x11,
+    //GGL_PIXEL_FORMAT_RESERVED_12 = 0x12,
+    //GGL_PIXEL_FORMAT_RESERVED_13 = 0x13,
+    //GGL_PIXEL_FORMAT_RESERVED_14 = 0x14,
+    //GGL_PIXEL_FORMAT_RESERVED_15 = 0x15,
+    //GGL_PIXEL_FORMAT_RESERVED_16 = 0x16,
+    //GGL_PIXEL_FORMAT_RESERVED_17 = 0x17,
 
     // reserved/special formats
     GGL_PIXEL_FORMAT_Z_16       =  0x18,
